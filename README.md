@@ -50,6 +50,16 @@ The resulting jar is placed in `target/` (for example `target/demo-0.0.1-SNAPSHO
 java -jar target/demo-0.0.1-SNAPSHOT.jar
 ```
 
+### Run with Docker
+
+Build the image and start the container with Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+The Dockerfile just sets up a Maven-enabled container and relies on the bind mount declared in `docker-compose.yml` to supply the sources and Maven wrapper at runtime. Because the container reads directly from your working tree, any edits you make on macOS are visible immediately—Spring Boot recompiles them on the fly. The service listens on `http://localhost:8080`. Use `docker compose down` when you are done.
+
 ## Project Structure
 
 ```

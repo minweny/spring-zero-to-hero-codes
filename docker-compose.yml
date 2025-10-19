@@ -1,0 +1,13 @@
+services:
+  spring-zero-to-hero-codes:
+    # Build the container image using the local Dockerfile
+    build: .
+    # Expose Spring Boot's HTTP port to the host
+    ports:
+      - "8080:8080"
+    # Bind mount the project directory so code edits reflect immediately in the container
+    volumes:
+      - .:/app
+    # Example of passing Spring profile configuration
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
