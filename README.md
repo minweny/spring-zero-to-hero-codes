@@ -2,6 +2,8 @@
 
 A minimal Spring Boot starter project that you can use to experiment with building REST APIs or web applications. The project ships with Spring Boot 3.5, Maven wrapper scripts, and a simple application entry point.
 
+Check the book here, https://spring-zero-to-hero.pages.dev/
+
 ## Prerequisites
 
 - Java 17 or newer installed and available on your PATH
@@ -18,7 +20,7 @@ java -version
 Clone your repository and move into the project directory:
 
 ```bash
-git clone https://github.com/<your-user>/spring-zero-to-hero-codes.git
+git clone https://github.com/minweny/spring-zero-to-hero-codes.git
 cd spring-zero-to-hero-codes
 ```
 
