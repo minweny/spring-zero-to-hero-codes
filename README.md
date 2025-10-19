@@ -30,7 +30,7 @@ Use the Maven wrapper to launch Spring Boot:
 ./mvnw spring-boot:run
 ```
 
-Once the build finishes, the app starts on `http://localhost:8080/`. The sample project does not expose REST endpoints yet, but the application context loads successfully and is ready for you to add controllers or other beans.
+Once the build finishes, the app starts on `http://localhost:8080/`. Visit `http://localhost:8080/hello` to see the demo `Hello, Todo!` response, and use the project as a starting point for your own controllers or beans.
 
 ### Run the tests
 
@@ -71,11 +71,13 @@ The Dockerfile just sets up a Maven-enabled container and relies on the bind mou
 │   ├── main
 │   │   ├── java
 │   │   │   └── com/example/demo
-│   │   │       └── DemoApplication.java   # Spring Boot entry point annotated with @SpringBootApplication
+│   │   │       ├── DemoApplication.java   # Spring Boot entry point annotated with @SpringBootApplication
+│   │   │       └── TodoController.java    # Simple REST endpoint returning Hello, Todo!
 │   │   └── resources
-│   │       ├── application.properties     # Externalized configuration; currently empty
+│   │       ├── application.properties     # Externalized configuration; sets app name
 │   │       ├── static/                    # Place static web assets (CSS, JS, images)
 │   │       └── templates/                 # Place Thymeleaf templates or other view templates
+│   │   └── java/com/example/demo/TodoController.java # Simple REST endpoint returning Hello, Todo!
 │   └── test
 │       └── java
 │           └── com/example/demo

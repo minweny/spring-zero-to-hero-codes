@@ -4,7 +4,7 @@ services:
     build: .
     # Expose Spring Boot's HTTP port to the host
     ports:
-      - "9090:9090"
+      - "8080:8080"
     # Bind mount the project directory so code edits reflect immediately in the container
     volumes:
       - .:/app
